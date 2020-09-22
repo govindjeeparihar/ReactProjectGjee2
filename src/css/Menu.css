@@ -1,0 +1,92 @@
+.navbar {
+    padding:0;
+}
+.navbar-expand-lg {
+    justify-content: flex-end;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+    position: relative;
+    color: #ddecf5;
+    padding: 10px 16px;
+    transition: 0.3s;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover, 
+.navbar-expand-lg .navbar-nav .nav-item:hover .nav-link {
+    color: #a2cce3;
+    text-decoration: none;
+}
+
+.DropClose{
+    display: none;
+}
+
+.DropOpen{
+    position: absolute;
+    display: block;
+    background: #1e4356;
+    min-width: 150px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item{
+    position: relative;
+}
+.dropdown-toggle{
+    position: absolute;
+    top: 10px;
+    right: 2px;
+    color: #ddecf5;
+    cursor: pointer;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item .DropOpen .nav-link {
+    color: #fff;
+    text-decoration: none;
+     
+}
+
+.navbar-expand-lg .navbar-nav .nav-item .DropOpen .nav-link:hover {
+    color: #a2cce3;
+    text-decoration: none;
+     
+}
+
+.MenuTrigger{
+    width: 25px;
+    display: block;
+    position: absolute;
+    top:-30px;
+    right:0;
+    z-index: 99;
+}
+
+.MenuTrigger span{
+    height: 3px;
+    margin:3px 0;
+    background: #fff;
+    display: block;
+}
+
+@media (max-width: 991px) {
+    .MenuClose{
+        position:fixed;
+        left:-100%;
+        transition: all 0.4s ease-in-out;
+        background: #1e4356;
+        min-width:200px;
+        padding: 15px;
+        top: 0;
+        bottom: 0;
+    }
+    
+    .MenuClose.MenuOpen{
+        left:0;
+         
+    }
+    .DropOpen{
+        position: static;
+    }
+ }
+
