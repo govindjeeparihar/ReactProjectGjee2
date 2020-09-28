@@ -1,112 +1,95 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 
 
 const Contact = () => {
-
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = (data) => {
         console.log(data);
     };
-
     return (
-
         <>
-            <section className="breadcrumbs">
+            <div className="contact">
                 <div className="container">
-
-                    <div className="d-flex justify-content-between align-items-center">
-                        <h2>Contact</h2>
-                        <ul>
-                            <li><NavLink to="/Home">Home</NavLink></li>
-                            <li>Contact</li>
-                        </ul>
+                    <div className="section-header">
+                        <p>Get In Touch</p>
+                        <h2>Get In Touch For Any Query</h2>
                     </div>
-
-                </div>
-            </section>
-
-
-            <section className="contact">
-                <div className="container">
-
-                    <div className="row">
-
-                        <div className="col-lg-6">
-
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className="info-box">
-                                        <i className="bx bx-map"></i>
-                                        <h3>Our Address</h3>
-                                        <p>A108 Adam Street, New York, NY 535022</p>
-                                    </div>
+                    <div className="row align-items-center">
+                        <div className="col-md-5">
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fa fa-map-marker-alt"></i>
                                 </div>
-                                <div className="col-md-6">
-                                    <div className="info-box">
-                                        <i className="bx bx-envelope"></i>
-                                        <h3>Email Us</h3>
-                                        <p>info@example.com<br />contact@example.com</p>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="info-box">
-                                        <i className="bx bx-phone-call"></i>
-                                        <h3>Call Us</h3>
-                                        <p>+1 5589 55488 55<br />+1 6678 254445 41</p>
-                                    </div>
+                                <div className="contact-text">
+                                    <h3>Our Head Office</h3>
+                                    <p>123 Street, New York, USA</p>
                                 </div>
                             </div>
-
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fa fa-phone-alt"></i>
+                                </div>
+                                <div className="contact-text">
+                                    <h3>Call for Help</h3>
+                                    <p>+012 345 6789</p>
+                                </div>
+                            </div>
+                            <div className="contact-info">
+                                <div className="contact-icon">
+                                    <i className="fa fa-envelope"></i>
+                                </div>
+                                <div className="contact-text">
+                                    <h3>Email for Information</h3>
+                                    <p>info@example.com</p>
+                                </div>
+                            </div>
                         </div>
-
-                        <div className="col-lg-6">
-
-                            <form onSubmit={handleSubmit(onSubmit)} className="php-email-form">
-                                <div className="form-group">
-                                    <input className="form-control" name="firstname"
+                        <div className="col-md-7">
+                            <div className="contact-form">
+                                <div id="success"></div>
+                                <form onSubmit={handleSubmit(onSubmit)}>
+                                    <div className="control-group">
+                                        <input type="text" className="form-control" placeholder="Your Name"
+                                        name="firstname"
                                         ref={register({
                                             required: true,
                                             minLength: 3,
                                             maxLength: 10,
                                             pattern: /^[A-Za-z]+$/i,
 
-                                        })} />
-
-<div className="validate">{errors.firstname && 'First name is required.'} </div>
-                                </div>
-                                <div className="form-group">
-                                    <input className="form-control" name="lastname" ref={register({ required: true })} />
-                                    <div className="validate">{errors.lastname && 'Last name is required.'}</div>
-                                </div>
-
-                                <div className="form-group">
-                                    <input className="form-control" name="age" ref={register({ required: true, pattern: /\d+/ })} />
-                                    <div className="validate"> {errors.age && 'Please enter number for age.'}</div>
-                                </div>
-
-                                <div className="form-group">
-                                    <input className="form-control" name="email" ref={register({
-                                        required: true, pattern: {
-                                            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                                             
-                                          }
-                                    })} />
-                                    <div className="validate"> {errors.email && 'Please enter valid email.'}</div>
-                                </div>
-
-                                <input className="btn btn-primary" type="submit" />
-                            </form>
-
+                                        })}
+                                        />
+                                        <p className="help-block text-danger">{errors.firstname && 'First name is required.'}</p>
+                                    </div>
+                                    <div className="control-group">
+                                        <input type="email" className="form-control" placeholder="Your Email"
+                                        name="email" ref={register({
+                                            required: true, pattern: {
+                                                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                                 
+                                              }
+                                        })}
+                                        />
+                                        <p className="help-block text-danger">{errors.email && 'Please enter valid email.'}</p>
+                                    </div>
+                                    <div className="control-group">
+                                        <input type="text" className="form-control" placeholder="Subject" name="subject" ref={register({ required: true })} />
+                                        <p className="help-block text-danger">{errors.subject && 'Subject is required.'}</p>
+                                    </div>
+                                    <div className="control-group">
+                                        <textarea className="form-control" placeholder="Message" name="msg" ref={register({ required: true })}></textarea>
+                                        <p className="help-block text-danger">{errors.msg && 'Message is required.'}</p>
+                                    </div>
+                                    <div>
+                                        <button className="btn" type="submit">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-
                     </div>
-
                 </div>
-            </section>
-
-
+            </div>
         </>
     )
 }

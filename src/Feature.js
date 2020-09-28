@@ -1,45 +1,12 @@
 import React from 'react';
-import about1 from './images/about-1.jpg';
-import about2 from './images/about-2.jpg';
 import businessMan from './images/business-man.png';
+
 import Testimonial from './Testimonial';
 
-
-const About = () => {
+const Feature = () => {
     return(
         <>
-        
-        <div className="about">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-md-6">
-                            <div className="about-img">
-                                <div className="about-img-1">
-                                    <img className="img-fluid" src={about2} alt="Image" />
-                                </div>
-                                <div className="about-img-2">
-                                    <img className="img-fluid" src={about1} alt="Image" />
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-md-6">
-                            <div className="section-header">
-                                <p>Learn About Us</p>
-                                <h2>25 Years Experience</h2>
-                            </div>
-                            <div className="about-text">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem.
-                            </p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
-                            </p>
-                                <a className="btn" href="">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="feature">
+       <div className="feature">
                 <div className="container">
                     <div className="row align-items-end">
                         <div className="col-md-6">
@@ -88,8 +55,6 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            
                 <Testimonial />
             </div>
             
@@ -97,4 +62,5 @@ const About = () => {
     )
 }
 
-export default About;
+
+export default Feature;

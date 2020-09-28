@@ -1,148 +1,129 @@
-.sliderWrapper {
-    width: 100%;
-    height: 95vh;
-    overflow: hidden;
-    position: relative;
-    padding:140px 0 60px;
+.slider {
+  
 }
-
-.sliderWrapper:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 130%;
-    height: 96%;
-    background: #68A4C4;
-    opacity: 0.3;
-    z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) translateY(18px) rotate(2deg);
+.slider .container-fluid {
+    padding: 0;
 }
+ 
 
-.sliderWrapper:after {
-    content: ' ';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 130%;
-    height: 95%;
-    background: linear-gradient(to right, rgba(30, 67, 86, 0.8), rgba(30, 67, 86, 0.6)), url(../images/hero-bg.jpg) center top no-repeat;
-    z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) rotate(0deg);
-}
-
-.sliderItem{
-    max-width: 60%;
-}
-
-.slick-slider{
-    z-index: 99;
+ 
+.slider-item-inner{
     text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0 100px;
 }
 
-.sliderWrapper h2 {
-    color: #fff;
-    margin-bottom: 30px;
-    font-size: 48px;
-    font-weight: 700;
-}
-
-.sliderWrapper p {
-    color: #fff;
-     
-}
-
-.sliderWrapper .btn-get-started {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-size: 14px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 12px 32px;
-    border-radius: 50px;
-    transition: 0.5s;
-    line-height: 1;
-    margin: 10px;
-    color: #fff;
-    border: 2px solid #68A4C4;
-}
-
-.slick-arrow{
+.slider .slider-item-inner:after {
     position: absolute;
-    top: 50%;
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(9, 42, 73, .7);
+    z-index: 1;
+}
+
+.slider .slider-text{
+    position: relative;
+    z-index: 9;
+    padding: 0 20px;
+}
+.slider .slider-text h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.slider .slider-text p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.slider .slider-text .btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: none;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    transition: .3s;
+    margin:10px;
+}
+
+.slider .slider-text .btn i {
+    margin-right: 5px;
+}
+
+.slider .slider-text .btn:hover {
+    color: #0796fe;
+    background: #ffffff;
+}
+
+ .slick-arrow{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0796fe;
+    background: #092a49;
+    font-size: 22px;
+    transition: .3s;
+    border: none;
     font-size: 0;
     font-weight: bold;
-    border: 0;
-    background: none;
-    font-family: 'boxicons'!important;
-    color: #fff;
-    opacity: .5;
-    z-index: 99;
+    font-family: "Font Awesome 5 pro";
 }
-
-.slick-arrow.slick-prev{
-    left:0
-}
-
-.slick-arrow.slick-prev:before {
-    content: "\e9f9";
-    font-size: 48px;
-    line-height: 1;
-}
-
-.slick-arrow.slick-next{
-    right: 0;
-}
-
-.slick-arrow.slick-next:before {
-    content: "\e9fa";
-    font-size: 48px;
-    line-height: 1;
-}
-
-
-
-
-
-
-
-@media (max-width: 991px) {
-    .sliderWrapper {
-        
-        height:100%; 
-        padding:100px 0 60px;
-    }
-    .sliderWrapper h2 {
-        
-        margin-bottom:20px;
-        font-size:35px;
-    }
-
-    .slick-arrow {
-       
-        top: 42%;
-    }
-
-
-
-}
-
-
-
-
-@media (max-width:500px) {
-     
-    .sliderWrapper h2 {
-        
-        margin-bottom:20px;
-        font-size:30px;
-    }
-    .sliderWrapper p {
-        color: #fff;
-        font-size: 0.9rem;
-    }
+ .slick-arrow.slick-next:after{
+    content: "\f105";
+    font-size: 22px;
     
+}
+
+ .slick-arrow.slick-prev:after{
+    content: "\f104";
+    font-size: 22px;
+}
+
+ .slick-arrow.slick-prev{
+    right: 62px;
+}
+
+ .slick-arrow:hover{
+color: #ffffff;
+    background: #0796fe;
+}
+
+
+@media (max-width: 991px){
+    .slider .slider-text h2 {
+        font-size:40px;
+    }
+
+    .slider .slider-text .btn {
+        padding: 10px 20px;
+    }
+
+    .slider .slider-text p {
+        font-size:18px;
+        margin-bottom: 20px;
+    }
+
+    .slider-item-inner{
+        padding:100px 0 50px;
+    }
 
 }

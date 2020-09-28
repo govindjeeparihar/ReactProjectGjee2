@@ -1,117 +1,134 @@
 import React from 'react';
 import './css/Testimonial.css';
-
 import Slider from 'react-slick';
 
-import TestiImg1 from './images/testimonials-1.jpg';
-import TestiImg2 from './images/testimonials-2.jpg';
-import TestiImg3 from './images/testimonials-3.jpg';
-import TestiImg4 from './images/testimonials-4.jpg';
-import TestiImg5 from './images/testimonials-5.jpg';
-
+import testimonial1 from './images/testimonial-1.jpg';
+import testimonial2 from './images/testimonial-2.jpg';
+import testimonial3 from './images/testimonial-3.jpg';
+import testimonial4 from './images/testimonial-4.jpg';
 
 
 const Testimonial = () => {
     const setting = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplaySpeed:500,
+        dots:false,
         autoplay: true,
-
+        slidesToScroll: 1,
+        slidesToShow:3,
+        speed: 500,
+        infinite: true,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: false
+              }
+            },
+            {
+              breakpoint: 700,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                initialSlide: 2
+              }
+            },
+            {
+              breakpoint: 500,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
     }
     return (
         <>
 
-
-<section className="testimonials aos-init">
-      <div className="container">
-
-        <div className="section-title">
-          <h2>Tetstimonials</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-
-
-
-            <Slider {...setting}>
-
-
-                <div className="item">
-                    <div className="testimonial-item">
-                        <img src={TestiImg1} className="testimonial-img" alt="" />
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
-                        <p>
-                            <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <i className="bx bxs-quote-alt-right quote-icon-right"></i>
-                        </p>
+            <div className="testimonial">
+                <div className="container">
+                    <div className="section-header">
+                        <p>Testimonial Carousel</p>
+                        <h2>100% Positive Customer Reviews</h2>
                     </div>
-                </div>
 
-                <div className="item">
+                    <Slider {...setting}>
                     <div className="testimonial-item">
-                        <img src={TestiImg2} className="testimonial-img" alt="" />
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <img src={testimonial2} alt="Image" />
                         <p>
-                            <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                            Phasellus pellentesque tempus pretium. Quisque in enim sit amet purus venenatis porttitor sed non velit. Vivamus vehicula finibus
                         </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
                     </div>
-                </div>
 
-                <div className="item">
                     <div className="testimonial-item">
-                        <img src={TestiImg3} className="testimonial-img" alt="" />
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <img src={testimonial3} alt="Image" />
                         <p>
-                            <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                            Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
                         </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
                     </div>
-                </div>
-
-                <div className="item">
                     <div className="testimonial-item">
-                        <img src={TestiImg4} className="testimonial-img" alt="" />
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <img src={testimonial4} alt="Image" />
                         <p>
-                            <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                            Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
                         </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
                     </div>
-                </div>
-
-                <div className="item">
                     <div className="testimonial-item">
-                        <img src={TestiImg5} className="testimonial-img" alt="" />
-                        <h3>Jena Karlis</h3>
-                        <h4>Store Owner</h4>
+                        <img src={testimonial1} alt="Image" />
                         <p>
-                            <i className="bx bxs-quote-alt-left quote-icon-left"></i>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <i className="bx bxs-quote-alt-right quote-icon-right"></i>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat
                         </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
                     </div>
+
+                    <div className="testimonial-item">
+                        <img src={testimonial2} alt="Image" />
+                        <p>
+                            Phasellus pellentesque tempus pretium. Quisque in enim sit amet purus venenatis porttitor sed non velit. Vivamus vehicula finibus
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div><div className="testimonial-item">
+                        <img src={testimonial3} alt="Image" />
+                        <p>
+                            Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                    <div className="testimonial-item">
+                        <img src={testimonial4} alt="Image" />
+                        <p>
+                            Sed in lectus eu eros tincidunt cursus. Aliquam eleifend velit nisl. Sed et posuere urna, ut vestibulum massa. Integer quis magna
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+                    <div className="testimonial-item">
+                        <img src={testimonial1} alt="Image" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat
+                        </p>
+                        <h2>Client Name</h2>
+                        <h3>Profession</h3>
+                    </div>
+
+                 </Slider>
+
                 </div>
-
-
-
-            </Slider>
             </div>
-    </section>
+
+
+            
         </>
     )
 }
 
-export default Testimonial
+export default Testimonial;

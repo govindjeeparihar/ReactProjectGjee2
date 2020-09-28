@@ -1,28 +1,112 @@
-header .hwrapper,
-header .sticky{
-    position: fixed;
+.top-bar {
+    position: relative;
+    padding: 0 60px;
+    background-image: linear-gradient(to right, #0796fe, #092a49);
+}
+
+.top-bar .top-bar-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-bar .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 35px;
+    padding: 0 10px;
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .15);
+    font-family: 'Oswald', sans-serif;
+}
+
+.top-bar .text i {
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.top-bar .text span {
+    color: #eeeeee;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.top-bar .text strong {
+    color: #eeeeee;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0 0 0 5px;
+    font-family: 'Lato', sans-serif;
+}
+
+.top-bar .header-social {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar .header-social li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height:35px;
+    font-size: 16px;
+    color: #ffffff;
+    border-right: 1px solid rgba(255, 255, 255, .15);
+    text-decoration: none;
+}
+
+.top-bar .header-social li a:hover {
+    color: #092a49;
+    background: #ffffff;
+}
+ 
+
+.header-bottom{
+    padding:12px 60px;
+    background: #092a49;
+    position: absolute;
     left: 0;
     right: 0;
-    top: 0;
-    transition: all 0.5s;
-    padding: 20px 0;
-    z-index: 999;
-    background: #1e4356;
+    z-index: 99;
+    transition: .5s;
 }
 
-.home header .hwrapper{
-    background:none;
+.home .header-bottom{
+    background: rgba(9, 42, 73, .2);
 }
 
-header .sticky{
-    background: rgba(30, 67, 86, 0.8);
-    padding:10px 0;
+.header-bottom-wrapper{
+    min-height: 79px;
 }
 
-header{
-    min-height:81px;
-}
-
-.home header{
+.home .header-bottom-wrapper{
     min-height:0;
+}
+
+.sticky .header-bottom{
+    position: fixed;
+    padding:2px 60px;
+    background: #092a49;
+    top: 0;
+}
+
+
+@media (max-width: 991px){
+    .home .header-bottom,
+    .header-bottom,
+    .sticky .header-bottom{
+        background: #092a49;
+        padding:8px 15px;
+        position: absolute;
+    }
+
 }

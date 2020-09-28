@@ -1,54 +1,130 @@
 import React from 'react';
 import './css/HomeSlider.css';
-
 import Slider from 'react-slick';
-
-
+import slider1 from './images/slider-1.jpg';
+import slider2 from './images/slider-2.jpg'
+import slider3 from './images/slider-3.jpg'
 
 const HomeSlider = () => {
+
     const setting = {
         dots: false,
+        autoplay: true,
         fade: true,
         infinite: true,
-        speed: 500,
+        spdee: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true
-
     }
+
     return (
-        <div className="sliderWrapper">
-            <div className="container">
-            <Slider {...setting}>
+        <div className="slider">
+            <div className="container-fluid">
+                <Slider {...setting}>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider2})` }}>
 
-                <div className="sliderItem">
-                    <div className="carousel-container">
-                        <h2 className="animated fadeInDown">Welcome to <span>Moderna</span></h2>
-                        <p className="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                        <a href="" className="btn-get-started animated fadeInUp">Read More</a>
-                    </div>
-                </div>
+                            <div className="slider-text">
+                                <h2>Your Success Our Achievement</h2>
+                                <p>
+                                    Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
 
-                <div className="sliderItem">
-                    <div className="carousel-container">
-                        <h2 className="animated fadeInDown">Lorem Ipsum Dolor</h2>
-                        <p className="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                        <a href="" className="btn-get-started animated fadeInUp">Read More</a>
-                    </div>
-                </div>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider3})` }}>
 
-                <div className="sliderItem">
-                    <div className="carousel-container">
-                        <h2 className="animated fadeInDown">Sequi ea ut et est quaerat</h2>
-                        <p className="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                        <a href="" className="btn-get-started animated fadeInUp">Read More</a>
-                    </div>
-                </div>
-            </Slider>
+                            <div className="slider-text">
+                                <h2>Your Business Our Effort</h2>
+                                <p>
+                                    Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider1})` }}>
+
+                            <div className="slider-text">
+                                <h2>Fastest Way to Achieve Success</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider2})` }}>
+
+                            <div className="slider-text">
+                                <h2>Your Success Our Achievement</h2>
+                                <p>
+                                    Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider3})` }}>
+
+                            <div className="slider-text">
+                                <h2>Your Business Our Effort</h2>
+                                <p>
+                                    Sed ultrices, est eget feugiat accumsan, dui nibh egestas tortor, ut rhoncus nibh ligula euismod quam. Proin pellentesque odio
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider1})` }}>
+
+                            <div className="slider-text">
+                                <h2>Fastest Way to Achieve Success</h2>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus ut mollis mauris. Vivamus egestas eleifend dui ac consequat at lectus in malesuada
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+                    <div className="slider-item">
+                        <div className="slider-item-inner" style={{ backgroundImage: `url(${slider2})` }}>
+                             
+                            <div className="slider-text">
+                                <h2>Your Success Our Achievement</h2>
+                                <p>
+                                    Morbi sagittis turpis id suscipit feugiat. Suspendisse eu augue urna. Morbi sagittis, orci sodales varius fermentum, tortor
+                            </p>
+                                <div className="slider-btn">
+                                    <a className="btn" href=""><i className="fa fa-link"></i>Get Started</a>
+                                    <a className="btn btn-play" data-toggle="modal" data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal"><i className="fa fa-play"></i>Watch Video</a>
+                                </div>
+                            </div>
+                        </div></div>
+                </Slider>
             </div>
-            </div>
+        </div>
     )
 }
-
 
 export default HomeSlider;
